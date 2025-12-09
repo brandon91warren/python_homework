@@ -1,6 +1,6 @@
 # Task 1
 def hello():
-    return "Hello World"
+    return "Hello"
 
 print(hello())
 
