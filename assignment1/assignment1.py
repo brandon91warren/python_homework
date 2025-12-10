@@ -145,20 +145,19 @@ def pig_latin(text):
     result = []
 
     for word in words:
-        # Rule 3: special case for "qu"
-        if word.startswith("qu"):
-            result.append(word[2:] + "quay")
-        # Rule 1: starts with vowel
-        elif word[0] in vowels:
+        if word[0] in vowels:
             result.append(word + "ay")
-        # Rule 2: starts with consonant(s)
         else:
-            # find first vowel
             i = 0
             while i < len(word) and word[i] not in vowels:
-                i += 1
+                # special case: "qu" inside consonant group
+                if word[i] == "q" and i + 1 < len(word) and word[i+1] == "u":
+                    i += 2
+                else:
+                    i += 1
             result.append(word[i:] + word[:i] + "ay")
 
     return " ".join(result)
+
 
 print("Task 10:", pig_latin("quick brown fox jumps over the lazy dog"))
