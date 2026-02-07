@@ -1,0 +1,15 @@
+1) Which sections of the website are restricted for crawling?
+Wikipedia restricts crawling of backend/dynamic and high-cost areas, including:
+- /w/ (most MediaWiki backend pages), /api/, and /trap/
+- Special pages: /wiki/Special: and localized/encoded variants (e.g., Spezial:, Spesial:)
+- Various maintenance/discussion areas such as deletion discussions (e.g., /wiki/Wikipedia:Articles_for_deletion/) and anti-spam pages (e.g., /wiki/MediaWiki:Spam-blacklist)
+
+2) Are there specific rules for certain user agents?
+Yes. Wikipedia applies bot-specific rules:
+- Many bots are blocked entirely with Disallow: / (examples include MJ12bot, Mediapartners-Google*, UbiCrawler, DOC, Zao, and several “offline copier” bots like HTTrack and Offline Explorer).
+- Some bots receive rate guidance (e.g., SemrushBot has Crawl-delay: 5).
+- Some internal/work bots appear with an empty Disallow:, meaning they are not blocked by robots.txt.
+
+3) Reflection (2–3 sentences)
+Robots.txt is a set of guidelines that tells automated crawlers which parts of a site they should avoid, especially pages that are expensive to generate or not intended for indexing. It promotes ethical scraping by reducing unnecessary load on servers and helping scrapers respect a site’s stated boundaries. It can also include bot-specific rules and crawl delays to encourage responsible request rates.
+EOF

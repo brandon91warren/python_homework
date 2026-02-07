@@ -1,0 +1,6 @@
+
+
+One challenge was locating the correct HTML section containing the OWASP Top 10 list, since the project page is a hub and the actual Top 10 items are on the Top10/2025 page. I resolved this by navigating to the Top10/2025 URL and then targeting the ordered list that contains the “A01:” entry.
+
+Another challenge was selecting the Top 10 items reliably. I used XPath to first find the ordered list containing A01 and then select each list item anchor tag to capture both the title text and the href link, and used WebDriverWait to ensure the list was loaded before extracting.
+EOF
