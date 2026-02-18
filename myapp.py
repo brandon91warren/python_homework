@@ -32,4 +32,5 @@ def update_graph(country_name):
     return fig
 
 if __name__ == "__main__":
-    app.run(debug=True)
+  app.run_server(debug=True)
+
